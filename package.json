@@ -1,0 +1,39 @@
+{
+  "name": "rest-parse",
+  "version": "0.0.1",
+  "description": "A Parse REST API for Nodejs",
+  "main": "./index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/boylove142/rest-parse.git"
+  },
+  "dependencies": {
+    "request": "2.27.x",
+    "underscore": "1.5.x",
+    "mime": "1.2.x"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "async": "*"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "keywords": [
+    "parse",
+    "rest",
+    "parsejs",
+    "rest",
+    "parse"
+  ],
+  "author": "boylove142",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boylove142/rest-parse/issues"
+  },
+  "homepage": "https://github.com/boylove142/rest-parse"
+}
