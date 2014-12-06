@@ -2,11 +2,11 @@
 var config = require('./config');
 var should = require('should');
 var async = require('async');
-var Kaiseki = require('../lib/kaiseki');
+var restParse = require('../lib/rest-parse');
 var _ = require('underscore');
 
-var parse = new Kaiseki(config.PARSE_APP_ID, config.PARSE_REST_API_KEY);
-var user = parse.user;
+var parse = new restParse(config.PARSE_APP_ID, config.PARSE_REST_API_KEY);
+var user = new parse.user();
 
 var users = {
   'Zennia': {
