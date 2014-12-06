@@ -1,6 +1,6 @@
 {
   "name": "rest-parse",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Parse REST API for Nodejs",
   "main": "./index.js",
   "scripts": {
