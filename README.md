@@ -59,7 +59,7 @@ This is to init the parse user before you could use it.
 var parseUser = Parse.user();
 ```
 
-####Sign up####
+####signUp(user, callback)####
 ```
 var newUser = {
   username: 'boylove142',
@@ -71,10 +71,90 @@ var newUser = {
 parseUser.signUp(newUser, callback);
 ```
 
-####Login####
+####logIn(username, password, callback)####
 ```
 var username = 'boylove142';
 var password = '123456';
 
 parseUser.logIn(username, password, callback);
 ```
+
+####get(userId, params, callback)####
+```
+var userId = '<random-user-id>';
+
+parseUser.get(userId, callback);
+```
+
+####getCurrent(callback)####
+
+This method is used to check whether you logged in or not.
+```
+parseUser.getCurrent(callback);
+```
+
+####getAll(params, callback)####
+
+Get all users
+
+```
+parseUser.getAll(callback);
+```
+
+Get all user with specified params. You can read more how to construct these params at [https://parse.com/docs/rest#queries](https://parse.com/docs/rest#queries)
+
+```
+var params = {
+  email: 'email@gmail.com'
+}
+
+parseUser.getAll(params, callback);
+```
+
+####update(userId, data, callback)####
+```
+var params = {
+  var userId = '<random-user-id>';
+  var params = {
+    name: 'Bob',
+    phone: '123456789',
+  }
+  
+  parseUser.update(userId, params, callback);
+}
+```
+####delete(userId, callback)####
+
+This method will delete a specified user from parse
+```
+var params = {
+  var userId = '<random-user-id>';
+  
+  parseUser.delete(userId, callback);
+}
+```
+####requestResetPassword(email, callback)####
+####logInSocial(authData, callback)####
+####linkWithSocial(userId, authData, callback)####
+####unlinkWithSocial(userId, authData, callback)####
+
+##Object##
+####create(data, callback)####
+####get(objectId, params, callback)####
+####getAll(params, callback)####
+####update(objectId, data, callback)####
+####delete(objectId, callback)####
+####count(params, callback)####
+####createMany(objects, callback)####
+####updateMany(objects, callback)####
+####deleteMany(obeccts, callback)####
+##File##
+####upload(filePath, fileName, callback)####
+####uploadBuffer(buffer, contentType, fileName, callback)####
+####delete(name, callback)####
+##Role##
+####create(role, callback)####
+####get(roleId, params, callback)####
+####update(roleId, data, callback)####
+####delete(roleId, callback)####
+####getAll(params, callback)####
